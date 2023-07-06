@@ -17,7 +17,7 @@ object example extends App with StringCalculator with BinaryOperationFabric with
   addBinaryOperation(createBinary("^", 3, (left, right) => Math.pow(left, right), 0)) // возведение в степень
   addBinaryOperation(createBinary("%", 3, (left, right) => left % right, 0)) // взятие модуля
 
-    //добовляем унарные функции
+  //добовляем унарные функции
   addUnaryFunction(createUnary("abs", num => abs(num))) // модуль
   addUnaryFunction(createUnary("exp", num => exp(num))) //
   addUnaryFunction(createUnary("sqrt", num => sqrt(num))) // квадратный корень
@@ -55,6 +55,7 @@ object example extends App with StringCalculator with BinaryOperationFabric with
   printResalt("lg(1 - 1/2)+lg(1 - 1/3)+lg(1 - 1/4)+lg(1 - 1/5)+lg(1 - 1/6)+lg(1 - 1/7)+lg(1 - 1/8)+lg(1 - 1/9)+lg(1 - 1/10)")
   printResalt("round((tanh(-2*pi)-(e^(-2*pi)-1)/(e^(-2*pi)+1))*100)")
   printResalt("round(fi^20)")
+  printResalt("cosh(pi+e) - (cosh(pi)*sinh(e)+sinh(pi)*cosh(e))")
 
   //функцияя для удобства
   def printResalt(expression: String): Unit = {
